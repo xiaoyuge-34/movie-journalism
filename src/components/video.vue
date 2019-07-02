@@ -51,7 +51,7 @@
             },
 
             getJJVideo() {
-                this.$http.jsonp("https://api.douban.com/v2/movie/top250?start="+this.star+"&count=10").then(result => {
+                this.$http.jsonp("https://api.douban.com/v2/movie/top250?apikey=0df993c66c0c636e29ecbb5344252a4a&start="+this.star+"&count=10").then(result => {
                     console.log(result.body);
                     if (result.body.total === 250) {
                         this.JJVideoList = this.JJVideoList.concat(result.body.subjects);

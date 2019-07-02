@@ -98,7 +98,7 @@
                 this.getJJVideo();
             },
             getJJVideo(val) {
-                this.$http.jsonp("https://api.douban.com/v2/movie/in_theaters?city=" + this.place + "&start=" + this.star + "&count=10").then(result => {
+                this.$http.jsonp("http://api.douban.com/v2/movie/in_theaters?apikey=0df993c66c0c636e29ecbb5344252a4a&city=" + this.place + "&start=" + this.star + "&count=10").then(result => {
                     console.log(result.body);
                     if (val !== undefined) {
                         this.JJVideoList = result.body.subjects;
